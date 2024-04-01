@@ -41,7 +41,7 @@ export default function Home() {
       const model = genAI.getGenerativeModel({ model: "gemini-pro-vision" });
 
       const prompt =
-        "Gostaria que você me falasse sobre esse carro, detalhes, marca, ano que foi lançado, e um pouco de sua história, separe em uma tabela o motor e as características do carro, detalhe o modelo do carro também, separe as tags em HTML, sem doctype etc, apenas as tags de conteúdo, separe as caracteristicas, caso não seja um carro retorne uma mensagem dizendo que não foi possível identificar o carro.";
+        "Qual o nome da possivel raça deste cachorro?";
 
       const result = await model.generateContent([prompt, testandoImagem]);
       const response = await result.response;
@@ -58,9 +58,9 @@ export default function Home() {
       <div className="gap-4 items-start grid grid-cols-1 lg:grid-cols-2 h-full w-full p-4">
         <Card className="w-full">
           <CardHeader>
-            <CardTitle>Faça upload de uma imagem de carro</CardTitle>
+            <CardTitle>Qual o nome da possivel raça deste cachorro?</CardTitle>
             <CardDescription>
-              deixe a i.a mostrar qual o modelo do carro e suas informações
+              deixe a i.a mostrar qual a raça do seu PET
             </CardDescription>
           </CardHeader>
           <CardContent>
